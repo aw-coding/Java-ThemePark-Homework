@@ -37,4 +37,9 @@ public class PlaygroundTest {
     public void canTestForAgeAndPass(){
         assertEquals(true, playground.isAllowedTo(visitor1));
     }
+
+    @Test
+    public void canTestForAgeAndFail(){
+        assertEquals(false, playground.isAllowedTo(visitor2));
+    }
 }

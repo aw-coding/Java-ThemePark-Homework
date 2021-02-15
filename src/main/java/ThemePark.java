@@ -17,4 +17,8 @@ public class ThemePark {
     public void addNewOffering(IReviewed iReviewed){
         offerings.add(iReviewed);
     }
+
+    public ArrayList<IReviewed> getAllReviewed(){
+        return offerings;
+    }
 }

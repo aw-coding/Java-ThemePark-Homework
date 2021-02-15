@@ -31,4 +31,12 @@ public class ThemeParkTest {
         assertEquals(1, themePark.getNumberOfIreviewed());
     }
 
+    @Test
+    public void canReturnArrayListOfIreviewed(){
+        themePark.addNewOffering(dodgems);
+        themePark.addNewOffering(tobaccoStall);
+        //ArrayList<IReviewed> answer = [dodgems, tobaccoStall];
+        assertEquals(2, themePark.getAllReviewed().size());
+    }
+
 }

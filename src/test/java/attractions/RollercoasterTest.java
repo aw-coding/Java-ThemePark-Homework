@@ -19,7 +19,7 @@ public class RollercoasterTest {
 
         visitor1 = new Visitor(20, 190.1, 300);
         visitor2 = new Visitor(25, 130.5, 30);
-        visitor2 = new Visitor(11, 150, 30);
+        visitor3 = new Visitor(11, 150, 30);
 
     }
 
@@ -41,5 +41,13 @@ public class RollercoasterTest {
     @Test
     public void canTestForAgeAndPass() {
         assertEquals(true, rollerCoaster.isAllowedTo(visitor1));
+    }
+    @Test
+    public void canTestForAgeAndFailTooYoung() {
+        assertEquals(false, rollerCoaster.isAllowedTo(visitor3));
+    }
+    @Test
+    public void canTestForAgeAndFailTooShort() {
+        assertEquals(false, rollerCoaster.isAllowedTo(visitor2));
     }
 }
